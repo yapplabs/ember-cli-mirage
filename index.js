@@ -32,7 +32,7 @@ module.exports = {
   },
 
   shouldIncludeFiles: function() {
-    var config = this.app.project.config()['ember-cli-mirage'];
+    var config = this.app.project.config(this.app.env)['ember-cli-mirage'];
 
     return config.force || (this.app.env !== 'production')
   },
